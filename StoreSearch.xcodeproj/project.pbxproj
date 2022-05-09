@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		F5352E1628287FFF00355CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5352E1528287FFF00355CF5 /* AppDelegate.swift */; };
 		F5352E1828287FFF00355CF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5352E1728287FFF00355CF5 /* SceneDelegate.swift */; };
-		F5352E1A28287FFF00355CF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5352E1928287FFF00355CF5 /* ViewController.swift */; };
+		F5352E1A28287FFF00355CF5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5352E1928287FFF00355CF5 /* SearchViewController.swift */; };
 		F5352E1D28287FFF00355CF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5352E1B28287FFF00355CF5 /* Main.storyboard */; };
 		F5352E1F2828800400355CF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5352E1E2828800400355CF5 /* Assets.xcassets */; };
 		F5352E222828800400355CF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5352E202828800400355CF5 /* LaunchScreen.storyboard */; };
+		F5352E2A28296ECB00355CF5 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5352E2928296ECB00355CF5 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F5352E1228287FFF00355CF5 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5352E1528287FFF00355CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5352E1728287FFF00355CF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5352E1928287FFF00355CF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5352E1928287FFF00355CF5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F5352E1C28287FFF00355CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5352E1E2828800400355CF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5352E212828800400355CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5352E232828800400355CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5352E2928296ECB00355CF5 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				F5352E1528287FFF00355CF5 /* AppDelegate.swift */,
 				F5352E1728287FFF00355CF5 /* SceneDelegate.swift */,
-				F5352E1928287FFF00355CF5 /* ViewController.swift */,
+				F5352E1928287FFF00355CF5 /* SearchViewController.swift */,
 				F5352E1B28287FFF00355CF5 /* Main.storyboard */,
 				F5352E1E2828800400355CF5 /* Assets.xcassets */,
 				F5352E202828800400355CF5 /* LaunchScreen.storyboard */,
 				F5352E232828800400355CF5 /* Info.plist */,
+				F5352E2928296ECB00355CF5 /* SearchResult.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5352E1A28287FFF00355CF5 /* ViewController.swift in Sources */,
+				F5352E1A28287FFF00355CF5 /* SearchViewController.swift in Sources */,
 				F5352E1628287FFF00355CF5 /* AppDelegate.swift in Sources */,
+				F5352E2A28296ECB00355CF5 /* SearchResult.swift in Sources */,
 				F5352E1828287FFF00355CF5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
