@@ -22,6 +22,12 @@ class SearchViewController: UIViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.contentInset = UIEdgeInsets(top: 51, left: 0, bottom: 0, right: 0)
+		
+		var cellNib = UINib(nibName: TableView.CellIdentifers.searchResultCell, bundle: nil)
+		tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifers.searchResultCell)
+		
+		cellNib = UINib(nibName: TableView.CellIdentifers.nothingFoundCell, bundle: nil)
+		tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifers.nothingFoundCell)
 	}
 }
 
@@ -61,24 +67,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cellIdentifier = "SearchResultCell"
 		
-		var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-		
-		if cell == nil {
-			cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
-		}
 		
 		if searchResults.count == 0 {
-			cell?.textLabel!.text = "(Nothing found)"
-			cell?.detailTextLabel!.text = ""
+			return tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifers.nothingFoundCell, for: indexPath)
 		} else {
+			let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifers.searchResultCell, for: indexPath) as! SearchResultCell
 			let searchResult = searchResults[indexPath.row]
-			cell?.textLabel!.text = searchResult.name
-			cell?.detailTextLabel!.text = searchResult.artistName
+			cell.nameLabel.text = searchResult.name
+			cell.artistNameLabel.text = searchResult.artistName
+			return cell
 		}
-	
-		return cell!
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -92,6 +91,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 			return indexPath
 		}
 	}
+	
+	struct TableView {
+		struct CellIdentifers {
+			static let searchResultCell = "SearchResultCell"
+			static let nothingFoundCell = "NothingFoundCell"
+		}
+		
+	}
 
 }
+
 
