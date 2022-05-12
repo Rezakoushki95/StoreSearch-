@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F51EBCA5282B309000D97148 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F51EBCA4282B309000D97148 /* NothingFoundCell.xib */; };
+		F51EBCAB282C50A600D97148 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F51EBCAA282C50A600D97148 /* LoadingCell.xib */; };
 		F5352E1628287FFF00355CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5352E1528287FFF00355CF5 /* AppDelegate.swift */; };
 		F5352E1828287FFF00355CF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5352E1728287FFF00355CF5 /* SceneDelegate.swift */; };
 		F5352E1A28287FFF00355CF5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5352E1928287FFF00355CF5 /* SearchViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		F51EBCA4282B309000D97148 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		F51EBCAA282C50A600D97148 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		F5352E1228287FFF00355CF5 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5352E1528287FFF00355CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5352E1728287FFF00355CF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				F5CF73A7282AABE500EBDEF6 /* SearchResultCell.xib */,
 				F51EBCA4282B309000D97148 /* NothingFoundCell.xib */,
+				F51EBCAA282C50A600D97148 /* LoadingCell.xib */,
 			);
 			path = "Nib Files";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				F5352E222828800400355CF5 /* LaunchScreen.storyboard in Resources */,
 				F5352E1F2828800400355CF5 /* Assets.xcassets in Resources */,
+				F51EBCAB282C50A600D97148 /* LoadingCell.xib in Resources */,
 				F5CF73A8282AABE500EBDEF6 /* SearchResultCell.xib in Resources */,
 				F51EBCA5282B309000D97148 /* NothingFoundCell.xib in Resources */,
 				F5352E1D28287FFF00355CF5 /* Main.storyboard in Resources */,
