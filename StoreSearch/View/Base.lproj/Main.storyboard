@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,18 +14,39 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="StoreSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-E6-8XZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="App name, artist, song, album, ebook." translatesAutoresizingMaskIntoConstraints="NO" id="My4-9E-bga">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                 <color key="barTintColor" name="SearchBar"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EeI-ET-4AJ">
+                                <rect key="frame" x="0.0" y="51" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" id="OYp-CT-4cW">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="2OF-Qc-THl">
+                                            <rect key="frame" x="16" y="5.5" width="343" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Music"/>
+                                                <segment title="Software"/>
+                                                <segment title="E-books"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qHY-f8-s8k"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -34,6 +55,7 @@
                             <constraint firstItem="My4-9E-bga" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3gS-6e-zM0"/>
                             <constraint firstItem="WmM-E6-8XZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BsW-1Z-Zd9"/>
                             <constraint firstItem="My4-9E-bga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cvh-qM-E8m"/>
+                            <constraint firstItem="EeI-ET-4AJ" firstAttribute="top" secondItem="My4-9E-bga" secondAttribute="bottom" id="DIb-JO-hip"/>
                             <constraint firstItem="WmM-E6-8XZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EbI-0c-RWb"/>
                             <constraint firstItem="WmM-E6-8XZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oH3-mM-K59"/>
                             <constraint firstItem="My4-9E-bga" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qJK-IH-jLe"/>
@@ -41,12 +63,13 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="My4-9E-bga" id="Ghj-QU-xUn"/>
+                        <outlet property="segmentedControl" destination="2OF-Qc-THl" id="q6M-Rf-3S8"/>
                         <outlet property="tableView" destination="WmM-E6-8XZ" id="FIC-ce-Yps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="85.714285714285708"/>
+            <point key="canvasLocation" x="167.19999999999999" y="-179.46026986506749"/>
         </scene>
     </scenes>
     <resources>
